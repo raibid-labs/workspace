@@ -1,0 +1,104 @@
+{
+  "$schema": "https://claude.ai/schemas/project-config.json",
+  "version": "1.0.0",
+  "organization": "raibid-labs",
+  "description": "Base configuration inherited by all raibid-labs repositories",
+
+  "rules": {
+    "organization": [
+      "Follow SPARC methodology (Specification, Pseudocode, Architecture, Refinement, Completion)",
+      "Use Claude-Flow for complex multi-agent orchestration",
+      "Execute operations concurrently in single messages",
+      "Batch ALL todos in ONE TodoWrite call (minimum 5-10 todos)",
+      "NEVER save working files, text/mds, and tests to root folder - use appropriate subdirectories",
+      "Use Claude Code's Task tool for spawning agents concurrently, not just MCP",
+      "MCP tools coordinate strategy, Claude Code executes with real agents"
+    ],
+    "buildSystem": [
+      "Prefer Just (Justfile) over Make for task automation",
+      "Use Nushell for cross-platform scripting over Bash",
+      "Standardize on modern build tools (cargo, npm/pnpm, poetry/uv)",
+      "Include Dockerfile for containerization where appropriate"
+    ],
+    "codeQuality": [
+      "Files should be under 500 lines",
+      "Never hardcode secrets - use environment variables",
+      "Write tests before implementation (TDD)",
+      "Separate concerns with clean architecture",
+      "Keep documentation updated",
+      "Use conventional commits"
+    ],
+    "testing": [
+      "Test-first development required",
+      "Minimum 80% code coverage",
+      "Include unit, integration, and e2e tests where applicable",
+      "Use language-appropriate testing frameworks"
+    ]
+  },
+
+  "mcpServers": {
+    "claude-flow": {
+      "command": "npx",
+      "args": ["claude-flow@alpha", "mcp", "start"],
+      "description": "Core SPARC orchestration and swarm coordination",
+      "required": true
+    },
+    "supermemory": {
+      "command": "npx",
+      "args": ["@supermemory/mcp-server"],
+      "description": "Organizational memory and context management",
+      "env": {
+        "SUPERMEMORY_API_KEY": "${SUPERMEMORY_API_KEY}",
+        "SUPERMEMORY_PROJECT_ID": "${SUPERMEMORY_PROJECT_ID}"
+      }
+    },
+    "mermaid": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-mermaid"],
+      "description": "Diagram generation for architecture and documentation"
+    }
+  },
+
+  "preferredTools": {
+    "buildRunner": "just",
+    "shell": "nushell",
+    "containerization": "docker",
+    "cicd": "github-actions"
+  },
+
+  "fileOrganization": {
+    "src": "Source code files",
+    "tests": "Test files",
+    "docs": "Documentation and markdown files",
+    "config": "Configuration files",
+    "scripts": "Utility scripts",
+    "examples": "Example code"
+  },
+
+  "namingConventions": {
+    "repositories": {
+      "dgx-*": "GPU/AI workload repositories",
+      "hack-*": "Experimental/research projects",
+      "raibid-*": "Core infrastructure/tools",
+      "*-mcp": "Model Context Protocol integrations"
+    },
+    "commits": "conventional-commits",
+    "branches": "kebab-case"
+  },
+
+  "workflows": {
+    "sparc": {
+      "modes": "npx claude-flow sparc modes",
+      "run": "npx claude-flow sparc run <mode> \"<task>\"",
+      "tdd": "npx claude-flow sparc tdd \"<feature>\"",
+      "batch": "npx claude-flow sparc batch <modes> \"<task>\"",
+      "pipeline": "npx claude-flow sparc pipeline \"<task>\""
+    }
+  },
+
+  "agents": {
+    "core": ["coder", "reviewer", "tester", "planner", "researcher"],
+    "sparc": ["sparc-coord", "sparc-coder", "specification", "pseudocode", "architecture", "refinement"],
+    "specialized": ["backend-dev", "mobile-dev", "ml-developer", "cicd-engineer", "api-docs", "system-architect", "code-analyzer", "base-template-generator"]
+  }
+}
