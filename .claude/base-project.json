@@ -111,6 +111,13 @@
   "agents": {
     "core": ["coder", "reviewer", "tester", "planner", "researcher"],
     "sparc": ["sparc-coord", "sparc-coder", "specification", "pseudocode", "architecture", "refinement"],
-    "specialized": ["backend-dev", "mobile-dev", "ml-developer", "cicd-engineer", "api-docs", "system-architect", "code-analyzer", "base-template-generator"]
+    "design": ["brand-guardian", "ui-designer", "ux-researcher", "visual-storyteller", "whimsy-injector"],
+    "engineering": ["ai-engineer", "backend-architect", "devops-automator", "frontend-developer", "mobile-app-builder", "rapid-prototyper", "test-writer-fixer"],
+    "marketing": ["app-store-optimizer", "content-creator", "growth-hacker", "instagram-curator", "reddit-community-builder", "tiktok-strategist", "twitter-engager"],
+    "product": ["feedback-synthesizer", "sprint-prioritizer", "trend-researcher"],
+    "project-management": ["experiment-tracker", "project-shipper", "studio-producer"],
+    "studio-operations": ["analytics-reporter", "finance-tracker", "infrastructure-maintainer", "legal-compliance-checker", "support-responder"],
+    "testing": ["api-tester", "performance-benchmarker", "test-results-analyzer", "tool-evaluator", "workflow-optimizer"],
+    "bonus": ["joker", "studio-coach"]
   }
 }
