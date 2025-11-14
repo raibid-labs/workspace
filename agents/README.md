@@ -1,22 +1,14 @@
-# Contains Studio AI Agents
+# raibid-labs AI Agents
 
 A comprehensive collection of specialized AI agents designed to accelerate and enhance every aspect of rapid development. Each agent is an expert in their domain, ready to be invoked when their expertise is needed.
 
-## 📥 Installation
+This collection is part of the raibid-labs workspace and automatically available to all repos that extend the organization's base configuration.
 
-1. **Download this repository:**
-   ```bash
-   git clone https://github.com/contains-studio/agents.git
-   ```
+## 📥 Available to All raibid-labs Repos
 
-2. **Copy to your Claude Code agents directory:**
-   ```bash
-   cp -r agents/* ~/.claude/agents/
-   ```
-   
-   Or manually copy all the agent files to your `~/.claude/agents/` directory.
+These agents are automatically available when using Claude Code in any repository that extends `github:raibid-labs/workspace/.claude/base-project.json`.
 
-3. **Restart Claude Code** to load the new agents.
+No installation needed - just reference the agent in your tasks!
 
 ## 🚀 Quick Start
 
