@@ -43,6 +43,15 @@
       "description": "Core SPARC orchestration and swarm coordination",
       "required": true
     },
+    "raibid-labs-mcp": {
+      "command": "npx",
+      "args": ["@raibid-labs/org-context-mcp-server"],
+      "description": "raibid-labs organization context and repository management",
+      "disabled": true,
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
     "supermemory": {
       "command": "npx",
       "args": ["@supermemory/mcp-server"],
