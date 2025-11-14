@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "organization": "raibid-labs",
   "description": "Base configuration inherited by all raibid-labs repositories",
-
   "rules": {
     "organization": [
       "Follow SPARC methodology (Specification, Pseudocode, Architecture, Refinement, Completion)",
@@ -35,17 +34,12 @@
       "Use language-appropriate testing frameworks"
     ]
   },
-
   "mcpServers": {
-    "claude-flow": {
-      "command": "npx",
-      "args": ["claude-flow@alpha", "mcp", "start"],
-      "description": "Core SPARC orchestration and swarm coordination",
-      "required": true
-    },
     "raibid-labs-mcp": {
       "command": "npx",
-      "args": ["@raibid-labs/org-context-mcp-server"],
+      "args": [
+        "@raibid-labs/org-context-mcp-server"
+      ],
       "description": "raibid-labs organization context and repository management",
       "disabled": true,
       "env": {
@@ -57,7 +51,9 @@
     },
     "supermemory": {
       "command": "npx",
-      "args": ["@supermemory/mcp-server"],
+      "args": [
+        "@supermemory/mcp-server"
+      ],
       "description": "Organizational memory and context management",
       "env": {
         "SUPERMEMORY_API_KEY": "${SUPERMEMORY_API_KEY}",
@@ -66,18 +62,18 @@
     },
     "mermaid": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-mermaid"],
+      "args": [
+        "@modelcontextprotocol/server-mermaid"
+      ],
       "description": "Diagram generation for architecture and documentation"
     }
   },
-
   "preferredTools": {
     "buildRunner": "just",
     "shell": "nushell",
     "containerization": "docker",
     "cicd": "github-actions"
   },
-
   "fileOrganization": {
     "src": "Source code files",
     "tests": "Test files",
@@ -86,7 +82,6 @@
     "scripts": "Utility scripts",
     "examples": "Example code"
   },
-
   "namingConventions": {
     "repositories": {
       "dgx-*": "GPU/AI workload repositories",
@@ -97,7 +92,6 @@
     "commits": "conventional-commits",
     "branches": "kebab-case"
   },
-
   "workflows": {
     "sparc": {
       "modes": "npx claude-flow sparc modes",
@@ -107,17 +101,74 @@
       "pipeline": "npx claude-flow sparc pipeline \"<task>\""
     }
   },
-
   "agents": {
-    "core": ["coder", "reviewer", "tester", "planner", "researcher"],
-    "sparc": ["sparc-coord", "sparc-coder", "specification", "pseudocode", "architecture", "refinement"],
-    "design": ["brand-guardian", "ui-designer", "ux-researcher", "visual-storyteller", "whimsy-injector"],
-    "engineering": ["ai-engineer", "backend-architect", "devops-automator", "frontend-developer", "mobile-app-builder", "rapid-prototyper", "test-writer-fixer"],
-    "marketing": ["app-store-optimizer", "content-creator", "growth-hacker", "instagram-curator", "reddit-community-builder", "tiktok-strategist", "twitter-engager"],
-    "product": ["feedback-synthesizer", "sprint-prioritizer", "trend-researcher"],
-    "project-management": ["experiment-tracker", "project-shipper", "studio-producer"],
-    "studio-operations": ["analytics-reporter", "finance-tracker", "infrastructure-maintainer", "legal-compliance-checker", "support-responder"],
-    "testing": ["api-tester", "performance-benchmarker", "test-results-analyzer", "tool-evaluator", "workflow-optimizer"],
-    "bonus": ["joker", "studio-coach"]
+    "core": [
+      "coder",
+      "reviewer",
+      "tester",
+      "planner",
+      "researcher"
+    ],
+    "sparc": [
+      "sparc-coord",
+      "sparc-coder",
+      "specification",
+      "pseudocode",
+      "architecture",
+      "refinement"
+    ],
+    "design": [
+      "brand-guardian",
+      "ui-designer",
+      "ux-researcher",
+      "visual-storyteller",
+      "whimsy-injector"
+    ],
+    "engineering": [
+      "ai-engineer",
+      "backend-architect",
+      "devops-automator",
+      "frontend-developer",
+      "mobile-app-builder",
+      "rapid-prototyper",
+      "test-writer-fixer"
+    ],
+    "marketing": [
+      "app-store-optimizer",
+      "content-creator",
+      "growth-hacker",
+      "instagram-curator",
+      "reddit-community-builder",
+      "tiktok-strategist",
+      "twitter-engager"
+    ],
+    "product": [
+      "feedback-synthesizer",
+      "sprint-prioritizer",
+      "trend-researcher"
+    ],
+    "project-management": [
+      "experiment-tracker",
+      "project-shipper",
+      "studio-producer"
+    ],
+    "studio-operations": [
+      "analytics-reporter",
+      "finance-tracker",
+      "infrastructure-maintainer",
+      "legal-compliance-checker",
+      "support-responder"
+    ],
+    "testing": [
+      "api-tester",
+      "performance-benchmarker",
+      "test-results-analyzer",
+      "tool-evaluator",
+      "workflow-optimizer"
+    ],
+    "bonus": [
+      "joker",
+      "studio-coach"
+    ]
   }
 }
