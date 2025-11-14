@@ -49,7 +49,10 @@
       "description": "raibid-labs organization context and repository management",
       "disabled": true,
       "env": {
-        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+        "GITHUB_APP_ID": "${GITHUB_APP_ID}",
+        "GITHUB_PRIVATE_KEY": "${GITHUB_PRIVATE_KEY}",
+        "GITHUB_INSTALLATION_ID": "${GITHUB_INSTALLATION_ID}",
+        "GITHUB_ORG": "raibid-labs"
       }
     },
     "supermemory": {
