@@ -1,0 +1,328 @@
+{
+  "summary": {
+    "total": 35,
+    "ok": 27,
+    "missing_config": 0,
+    "wrong_extends": 0,
+    "no_extends": 0,
+    "not_cloned": 7,
+    "errors": 0
+  },
+  "results": [
+    {
+      "name": "BrowserOS",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "Fable",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "ardour",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "ardour-mcp",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "cosmos-nvim",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "dgx-music",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "dgx-pixels",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "dgx-spark",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "dgx-spark-mcp",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "mcp-integration",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "dgx-spark-playbooks",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "docs",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "fsrs",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "grimware",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "hack",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "hack-agent-lightning",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "hack-bevy",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "hack-browser",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "hack-ci",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "hack-hafl",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "hack-k8s",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "hack-link-manager",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "hack-research",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "locust",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "mop",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "iac-k8s",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "nushell",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "obi-mcp",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "mcp-integration",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "osai",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "raibid-ci",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "raibid-cli",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "raibid-labs-mcp",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "mcp-integration",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "skunkworks",
+      "cloned": false,
+      "has_config": false,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "not_cloned",
+      "issue": null
+    },
+    {
+      "name": "sparky",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "library",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "upterm",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "iac-k8s",
+      "status": "ok",
+      "issue": null
+    },
+    {
+      "name": "workspace",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": false,
+      "repo_type": null,
+      "status": "workspace",
+      "issue": "This is the base config repository"
+    },
+    {
+      "name": "xptui",
+      "cloned": true,
+      "has_config": true,
+      "extends_base": true,
+      "repo_type": "rust-service",
+      "status": "ok",
+      "issue": null
+    }
+  ]
+}
