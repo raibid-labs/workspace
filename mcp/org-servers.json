@@ -162,21 +162,26 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
       "description": "Enhanced reasoning for complex problem solving",
-      "tags": ["reasoning", "thinking", "optional"],
-      "disabled": true
+      "tags": ["reasoning", "thinking", "recommended"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "context7-mcp-server"],
+      "description": "Context management and intelligent code understanding",
+      "tags": ["context", "reasoning", "recommended"]
     }
   },
   "metadata": {
     "organization": "raibid-labs",
     "version": "1.0.0",
-    "lastUpdated": "2025-11-12",
+    "lastUpdated": "2025-11-14",
     "description": "Organization-wide MCP server configuration for raibid-labs AI/ML development",
     "categories": {
       "required": ["claude-flow"],
-      "recommended": ["filesystem", "github", "git", "memory"],
+      "recommended": ["filesystem", "github", "git", "memory", "sequential-thinking", "context7"],
       "ai-ml": ["postgres", "sqlite", "python-lsp", "jupyter", "kubernetes", "prometheus"],
       "development": ["rust-analyzer", "docker"],
-      "optional": ["ruv-swarm", "flow-nexus", "brave-search", "puppeteer", "slack", "aws", "sequential-thinking"]
+      "optional": ["ruv-swarm", "flow-nexus", "brave-search", "puppeteer", "slack", "aws"]
     }
   }
 }
