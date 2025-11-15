@@ -169,6 +169,16 @@
       "args": ["-y", "context7-mcp-server"],
       "description": "Context management and intelligent code understanding",
       "tags": ["context", "reasoning", "recommended"]
+    },
+    "dgx-spark": {
+      "command": "npx",
+      "args": ["-y", "github:raibid-labs/dgx-spark-mcp"],
+      "description": "Hardware-aware Spark optimization for NVIDIA DGX systems",
+      "tags": ["dgx", "spark", "ai-ml", "gpu", "optimization", "recommended"],
+      "env": {
+        "MOCK_HARDWARE": "${MOCK_HARDWARE:-false}"
+      },
+      "note": "Currently installed from GitHub. Will use npm package once published."
     }
   },
   "metadata": {
@@ -178,8 +188,8 @@
     "description": "Organization-wide MCP server configuration for raibid-labs AI/ML development",
     "categories": {
       "required": ["claude-flow"],
-      "recommended": ["filesystem", "github", "git", "memory", "sequential-thinking", "context7"],
-      "ai-ml": ["postgres", "sqlite", "python-lsp", "jupyter", "kubernetes", "prometheus"],
+      "recommended": ["filesystem", "github", "git", "memory", "sequential-thinking", "context7", "dgx-spark"],
+      "ai-ml": ["postgres", "sqlite", "python-lsp", "jupyter", "kubernetes", "prometheus", "dgx-spark"],
       "development": ["rust-analyzer", "docker"],
       "optional": ["ruv-swarm", "flow-nexus", "brave-search", "puppeteer", "slack", "aws"]
     }
