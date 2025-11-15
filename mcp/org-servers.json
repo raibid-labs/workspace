@@ -179,6 +179,17 @@
         "MOCK_HARDWARE": "${MOCK_HARDWARE:-false}"
       },
       "note": "Currently installed from GitHub. Will use npm package once published."
+    },
+    "raibid-labs": {
+      "command": "npx",
+      "args": ["-y", "github:raibid-labs/raibid-labs-mcp"],
+      "description": "Organization context and standards enforcement for raibid-labs repositories",
+      "tags": ["organization", "standards", "compliance", "github", "required"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_ORG": "raibid-labs"
+      },
+      "note": "Currently installed from GitHub. Will use npm package once published."
     }
   },
   "metadata": {
@@ -187,7 +198,7 @@
     "lastUpdated": "2025-11-14",
     "description": "Organization-wide MCP server configuration for raibid-labs AI/ML development",
     "categories": {
-      "required": ["claude-flow"],
+      "required": ["claude-flow", "raibid-labs"],
       "recommended": ["filesystem", "github", "git", "memory", "sequential-thinking", "context7", "dgx-spark"],
       "ai-ml": ["postgres", "sqlite", "python-lsp", "jupyter", "kubernetes", "prometheus", "dgx-spark"],
       "development": ["rust-analyzer", "docker"],

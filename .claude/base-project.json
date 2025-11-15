@@ -38,14 +38,12 @@
     "raibid-labs-mcp": {
       "command": "npx",
       "args": [
-        "@raibid-labs/org-context-mcp-server"
+        "-y",
+        "github:raibid-labs/raibid-labs-mcp"
       ],
-      "description": "raibid-labs organization context and repository management",
-      "disabled": true,
+      "description": "raibid-labs organization context, standards enforcement, and repository management",
       "env": {
-        "GITHUB_APP_ID": "${GITHUB_APP_ID}",
-        "GITHUB_PRIVATE_KEY": "${GITHUB_PRIVATE_KEY}",
-        "GITHUB_INSTALLATION_ID": "${GITHUB_INSTALLATION_ID}",
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
         "GITHUB_ORG": "raibid-labs"
       }
     },
