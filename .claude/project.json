@@ -1,0 +1,112 @@
+{
+  "$schema": "https://claude.ai/schemas/project-config.json",
+  "version": "1.0.0",
+  "name": "workspace",
+  "description": "raibid-labs workspace - centralized Claude configuration for the organization",
+
+  "project": {
+    "name": "workspace",
+    "type": "infrastructure",
+    "repository": "https://github.com/raibid-labs/workspace",
+    "description": "Organization-wide Claude configuration, templates, and standards"
+  },
+
+  "language": {
+    "primary": "json",
+    "secondary": ["markdown", "bash", "nushell"]
+  },
+
+  "contextFiles": [
+    "README.md",
+    "CLAUDE.md",
+    ".claude/base-project.json",
+    "mcp/org-servers.json",
+    "templates/repo-types/",
+    "docs/"
+  ],
+
+  "fileStructure": {
+    ".claude/": "Base configuration and rules inherited by all repos",
+    "mcp/": "Organization-wide MCP server definitions",
+    "templates/": "Repository type templates (rust-service, python-ml, etc)",
+    "scripts/": "Repository management and sync scripts",
+    "docs/": "Setup guides and documentation"
+  },
+
+  "customInstructions": [
+    "This is the raibid-labs workspace - the centralized configuration repository",
+    "Changes here affect all 22+ repositories in the organization",
+    "Use SPARC methodology for systematic development",
+    "Always validate JSON before committing (use jq)",
+    "Test template changes before syncing to repos",
+    "See CLAUDE.md for complete instructions"
+  ],
+
+  "mcpServers": {
+    "raibid-labs-mcp": {
+      "command": "npx",
+      "args": ["-y", "github:raibid-labs/raibid-labs-mcp"],
+      "description": "Organization context, standards enforcement, and repository management",
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_ORG": "raibid-labs"
+      }
+    },
+    "dgx-spark-mcp": {
+      "command": "npx",
+      "args": ["-y", "github:raibid-labs/dgx-spark-mcp"],
+      "description": "Hardware-aware Spark optimization for NVIDIA DGX systems",
+      "env": {
+        "MOCK_HARDWARE": "${MOCK_HARDWARE:-false}"
+      }
+    },
+    "claude-flow": {
+      "command": "npx",
+      "args": ["claude-flow@alpha", "mcp", "start"],
+      "description": "SPARC methodology orchestration with swarm coordination",
+      "env": {
+        "CLAUDE_FLOW_AUTO_HOOKS": "true",
+        "CLAUDE_FLOW_SESSION_PERSIST": "true"
+      }
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Persistent memory for cross-session context"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Enhanced reasoning for complex problem solving"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "description": "GitHub API integration for repository management",
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/beengud/raibid-labs"],
+      "description": "File system access for raibid-labs repositories"
+    }
+  },
+
+  "rules": {
+    "workspace": [
+      "Changes affect all downstream repositories - consider blast radius",
+      "Validate JSON syntax with jq before committing",
+      "Test template changes with --dry-run before applying",
+      "Document breaking changes in docs/MIGRATION.md",
+      "Use conventional commits for versioning"
+    ],
+    "templates": [
+      "Keep templates minimal - repos can override",
+      "Test with at least 3 different repo types",
+      "Include clear comments explaining each section",
+      "Ensure backwards compatibility when possible"
+    ]
+  }
+}
