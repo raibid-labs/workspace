@@ -1,0 +1,11 @@
+{
+  "extends": ".gemini/base-project.json",
+  "name": "raibid-labs-workspace",
+  "description": "Repository initialized with raibid-labs org config for Gemini",
+  "type": "lib",
+  "customInstructions": [
+    "Follow raibid-labs coding standards and best practices",
+    "Use SPARC methodology for development",
+    "Coordinate work using Gemini swarm architecture"
+  ]
+}
